@@ -37,7 +37,7 @@ class BDemo
                 }
             }
             if(flag==0)
-              break;  
+              return;  
         }
     }
 }
