@@ -9,7 +9,7 @@ class Meet
         int n=sc.nextInt();
         int s[]=new int[n];
         int f[]=new int[n];
-        int p[i]=new int[n];
+        int p[]=new int[n];
         System.out.println("Enter start time of meeting: ");
         for(int i=0;i<s.length;i++)
             s[i]=sc.nextInt();
