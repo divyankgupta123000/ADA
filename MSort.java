@@ -1,5 +1,5 @@
 import java.util.*;
-class Msort {
+class MSort {
     static void mergeArr(int arr[], int l, int m, int r)
     {
         int lsize=m - l + 1;
