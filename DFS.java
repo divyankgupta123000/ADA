@@ -1,6 +1,6 @@
 import java.util.*;
 
-class DFS
+class Depth
 {
     public static void main(String args[])
     {
@@ -47,14 +47,17 @@ class DFS
 
 class DDemo
 {
-    int n,cycle=-1;
+    int n,cycle=-1,top=-1;
+    int stk[];
     DDemo(int v)
     {
         n=v;
+        stk=new int[n];
     }
     void dfs(int a[][],int state[],int vno,int parent)
     {
-        System.out.print(vno+1+" ");
+        //System.out.print(vno+1+" ");
+        push(vno+1);
         state[vno]=1;
         for(int i=0;i<n;i++)
         {
@@ -65,6 +68,26 @@ class DDemo
             }
             if(a[vno][i]==1 && state[i]==0)
                 dfs(a,state,i,vno);
+        }
+        pop();
+    }
+    void push(int ele)
+    {
+        stk[++top]=ele;
+        disp();
+    }
+    void pop()
+    {
+       if(top!=-1)
+           top--;
+    }
+    void disp()
+    {
+        if(top==-1)
+                System.out.println("Stack is Empty!!!");
+        else
+        {
+                System.out.print(stk[top]+" ");
         }
     }
 }
